@@ -45,7 +45,7 @@ Resources:
       RoleArn: !GetAtt CodeBuildServiceRole.Arn
       ArtifactStore:
         Type: S3
-        Location: buckettestehelloworld
+        Location: codepipeline-us-east-1-836774054829
       Stages:
         - Name: Source
           Actions:
@@ -58,7 +58,7 @@ Resources:
               OutputArtifacts:
                 - Name: SourceOutput
               Configuration:
-                S3Bucket: buckettestehelloworld
+                S3Bucket: codepipeline-us-east-1-836774054829
                 S3ObjectKey: index.html
               RunOrder: 1
         - Name: Build
@@ -90,8 +90,3 @@ Resources:
                 ApplicationName: HelloWorldCodeDeploy
                 DeploymentGroupName: HelloWorldImplantacaoCodeDeploy
               RunOrder: 1
-
-  AdditionalBucket:
-    Type: AWS::S3::Bucket
-    Properties:
-      AccessControl: PublicRead
