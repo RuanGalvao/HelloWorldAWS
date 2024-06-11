@@ -45,7 +45,7 @@ Resources:
       RoleArn: !GetAtt CodeBuildServiceRole.Arn
       ArtifactStore:
         Type: S3
-        Location: BucketIndexTeste
+        Location: buckettestehelloworld
       Stages:
         - Name: Source
           Actions:
@@ -58,7 +58,7 @@ Resources:
               OutputArtifacts:
                 - Name: SourceOutput
               Configuration:
-                S3Bucket: BucketIndexTeste
+                S3Bucket: buckettestehelloworld
                 S3ObjectKey: index.html
               RunOrder: 1
         - Name: Build
