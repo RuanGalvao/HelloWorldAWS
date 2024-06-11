@@ -90,3 +90,8 @@ Resources:
                 ApplicationName: HelloWorldCodeDeploy
                 DeploymentGroupName: HelloWorldImplantacaoCodeDeploy
               RunOrder: 1
+
+  AdditionalBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
