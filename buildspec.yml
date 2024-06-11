@@ -3,4 +3,4 @@ version: 0.2
 phases:
   build:
     commands:
-      - aws s3 cp index.html s3://buckettestehelloworld/index.html
+      - aws s3 cp index.html s3://codepipeline-us-east-1-836774054829/index.html
